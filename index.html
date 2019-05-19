@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 
 <html>
   <head>
  
     <meta charset="utf-8">
-    <title>Politische Landschaft</title>
+    <title>Germany's Political Landscape</title>
   <script src="https://d3js.org/d3.v4.min.js"></script>
    <script src="d3\d3.js"></script>
   
@@ -324,8 +325,8 @@ drag_handler(node);
 
 
 	
-	keyElements.append("text").attr("x",10).attr("y",function(d,i){return 30}).text("Deutschlands politische Landschaft").attr("font-size","30").attr("fill", "white").attr("class","title");
-	keyElements.append("text").attr("x",10).attr("y",function(d,i){return 45}).text("Europawahl 2019").attr("font-size","10").attr("fill", "white").attr("class","title");
+	keyElements.append("text").attr("x",10).attr("y",function(d,i){return 30}).text("Germany's Political landscape").attr("font-size","30").attr("fill", "white").attr("class","title");
+	keyElements.append("text").attr("x",10).attr("y",function(d,i){return 45}).text("European Elections 2019").attr("font-size","10").attr("fill", "white").attr("class","title");
 
 
 
@@ -350,16 +351,17 @@ barChart.append("text").text("100%").attr("font-size", 8).attr("x", 90+5+barScal
 barChart.append("text").text("50%").attr("font-size", 8).attr("x", 90+5+barScale(38/2)).attr("y", function(){return 12*20+100-4;}).attr("fill", "white").attr("text-anchor", "middle");
 //Current Party:
 
-barChart.append("text").text("Klicke auf eine Partei im Netzwerk für mehr Informationen.").attr("x", 10).attr("y",80).attr("fill", "white").attr("font-size", 20).attr("id", "currentParty");
+barChart.append("text").text("Click on the nodes for more information.").attr("x", 10).attr("y",80).attr("fill", "white").attr("font-size", 20).attr("id", "currentParty");
 console.log("end");
 
 
 //Draw explanation
 
 var explanationText= [
-"Analyse des Antwortverhaltens der 12 größten Parteien",
-"zu den 38 Wahl-O-Mat-Thesen der BPB","",
-"Klicke auf eine Partei für mehr Informationen"
+"Analysis of the provided answers to the 38 questions of the Wahl-O-Mat",
+"provided by the 12 largest parties.","",
+"Parties with similar answers are mapped closer togehter.","",
+"Visualization done using D3.js"
 ];
 
 var explanation = svg.append("g");
